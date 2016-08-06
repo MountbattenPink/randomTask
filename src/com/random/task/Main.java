@@ -10,7 +10,13 @@ import com.random.task.services.Service;
  */
 public class Main {
     public static void main(String[] args) {
-        Message message = new Message("Alex", "Anna", "Hello", "Can we meet tomorrow?");
+        Message message =new Message.Builder()
+                .from("Alex")
+                .to("Anna")
+                .topic("Hello")
+                .text("Can we meet tomorrow?")
+                .signature("Sincerely, Alex")
+                .build();
         Services.registerProvider(new SoapProvider());
         Service service = Services.newInstance();
         service.initiateConnection();
