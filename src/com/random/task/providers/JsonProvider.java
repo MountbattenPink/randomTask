@@ -9,6 +9,6 @@ import com.random.task.services.Service;
 public class JsonProvider implements Provider {
     @Override
     public Service newService() {
-        return new JsonService();
+        return JsonService.getInstance();
     }
 }

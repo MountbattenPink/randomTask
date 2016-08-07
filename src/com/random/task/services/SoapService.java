@@ -9,6 +9,14 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
  */
 public class SoapService implements Service {
 
+    private static final SoapService INSTANCE = new SoapService();
+
+    private SoapService() {}
+
+    public static SoapService getInstance(){
+        return INSTANCE;
+    }
+
     @Override
     public void initiateConnection() {
         System.out.println("SOAP connection was initiated.");

@@ -9,6 +9,6 @@ import com.random.task.services.Service;
 public class SoapProvider implements Provider {
     @Override
     public Service newService() {
-        return new SoapService();
+        return SoapService.getInstance();
     }
 }
