@@ -8,7 +8,7 @@ import java.io.IOException;
  * Created by olsh on 8/5/2016.
  */
 public class JsonService implements Service {
-    private static final JsonService INSTANCE = new JsonService();
+    private transient static final JsonService INSTANCE = new JsonService();
 
     private JsonService() {}
 
